@@ -3,7 +3,7 @@
     <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
   </head>
   <body>
-    <a-scene>
+    <a-scene background="color: red">
       <a-assets>
         <img id="square" src="/images/forest.png" />
       </a-assets>
@@ -13,16 +13,19 @@
         radius="1.25"
         src="#square"
         rotation="0 0 0"
-        animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 10000; easing: linear"
       >
       </a-sphere>
-      <a-plane
-        position="0 0 0"
-        rotation="-90 0 0"
-        width="4"
-        height="4"
-        color="#7BC8A4"
-      ></a-plane>
+      <a-torus
+        color="#43A367"
+        position="0.5 1.25 -5"
+        arc="360"
+        radius="5"
+        radius-tubular="0.5"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"
+        src="#square"
+      ></a-torus>
+
       <a-sky color="#ECECEC"></a-sky>
     </a-scene>
   </body>
