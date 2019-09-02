@@ -9,7 +9,7 @@
       </a-assets>
       <a-sphere
         material="fog: false"
-        position="0.5 1.25 -5"
+        position="0 1.6 -5"
         radius="1.25"
         src="#square"
         rotation="0 0 0"
@@ -18,15 +18,17 @@
       </a-sphere>
       <a-torus
         color="#43A367"
-        position="0.5 1.25 -5"
+        position="0 1.6 -5"
         arc="360"
         radius="5"
         radius-tubular="0.5"
-        animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"
         src="#square"
       ></a-torus>
 
       <a-sky color="#ECECEC"></a-sky>
     </a-scene>
   </body>
+
+  <script src="action.js"></script>
+
 </html>
